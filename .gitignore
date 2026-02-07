@@ -1,0 +1,22 @@
+
+_pycache_/
+*.pyc
+venv/
+
+# Environment
+.env
+
+# Uploads & data
+uploads/
+backend/uploads/
+
+# Firebase
+.firebase/
+
+# Node
+node_modules/
+
+# ML
+model.pkl
+
+ml/dataset/

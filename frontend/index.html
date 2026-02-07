@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blood Group Detection</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Blood Group Detection</h1>
+      <p class="subtitle">Upload fingerprint image</p>
+
+      <!-- FORM WITH onsubmit -->
+      <form onsubmit="return predict(event)">
+        <input type="file" id="fileInput" accept=".bmp,.png,.jpg,.jpeg">
+        <button type="submit">Predict</button>
+      </form>
+
+      <div id="result">Waiting for image...</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
