@@ -14,7 +14,7 @@ function predict(event) {
 
   result.innerText = "⏳ Predicting...";
 
-  fetch("http://127.0.0.1:5000/predict", {
+  fetch("https://your-backend.onrender.com/predict", {
     method: "POST",
     body: formData
   })
