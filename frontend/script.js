@@ -14,7 +14,7 @@ function predict(event) {
 
   result.innerText = "⏳ Predicting...";
 
-  fetch("https://blood-group-detection-ml.onrender.com", {
+  fetch("https://blood-group-detection-ml.onrender.com/predict", {
     method: "POST",
     body: formData
   })
