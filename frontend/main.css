@@ -4,61 +4,795 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Arial, sans-serif;
 }
-body {
-  height: 100vh;
-  background: linear-gradient(135deg, #c31432, #240b36);
+
+html {
+  scroll-behavior: smooth;
 }
 
-.container {
-  height: 100%;
+body {
+  background: #f8fafc;
+  color: #172033;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e8ebf0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  height: 76px;
+  padding: 0 25px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #c31432;
+  color: white;
+
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo span {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  color: #172033;
+}
+
+.logo-red {
+  display: inline !important;
+  color: #c31432 !important;
+}
+
+.logo small {
+  display: block;
+  font-size: 9px;
+  color: #8991a1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-container nav {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-container nav a {
+  text-decoration: none;
+  color: #596273;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.nav-container nav a:hover {
+  color: #c31432;
+}
+
+.login-btn {
+  border: 1px solid #e3e6eb;
+  background: white;
+  color: #c31432;
+
+  padding: 10px 22px;
+  border-radius: 8px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #c31432;
+  color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 650px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(195, 20, 50, 0.08), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(36, 11, 54, 0.08), transparent 30%),
+    #f8fafc;
+
+  padding: 80px 25px;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  gap: 80px;
+}
+
+.hero-text {
+  padding-left: 20px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+  border-radius: 30px;
+
+  background: #fff1f3;
+  color: #c31432;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  margin-bottom: 25px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background: #c31432;
+  border-radius: 50%;
+}
+
+.hero-text h1 {
+  font-size: 55px;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  color: #172033;
+  margin-bottom: 25px;
+}
+
+.hero-text h1 span {
+  display: block;
+  color: #c31432;
+}
+
+.hero-text > p {
+  max-width: 590px;
+  color: #687284;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-features {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.hero-features div {
+  font-size: 13px;
+  color: #566070;
+  font-weight: 600;
+}
+
+.hero-features span {
+  color: #c31432;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+
+/* =========================
+   DETECTION CARD
+========================= */
+
+.container {
+  width: 100%;
 }
 
 .card {
   background: white;
-  padding: 40px;
-  width: 360px;
-  border-radius: 16px;
+  padding: 38px;
+
+  width: 100%;
+  border-radius: 20px;
+
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+
+  border: 1px solid #e9ebef;
+
+  box-shadow:
+    0 25px 70px rgba(27, 35, 55, 0.12);
+}
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff1f3;
+  color: #c31432;
+
+  border-radius: 14px;
+
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .card h1 {
-  margin-bottom: 10px;
-  color: #c31432;
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #172033;
 }
 
 .subtitle {
-  font-size: 14px;
-  color: #555;
+  font-size: 13px;
+  color: #8991a1;
   margin-bottom: 25px;
 }
 
-input[type="file"] {
-  width: 100%;
-  margin-bottom: 20px;
+
+/* Upload */
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px 15px;
+
+  border: 1.5px dashed #d5d9e1;
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  background: #fafbfc;
 }
 
-button {
+.upload-area:hover {
+  border-color: #c31432;
+  background: #fff7f8;
+}
+
+.upload-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff1f3;
+  color: #c31432;
+
+  border-radius: 50%;
+
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.upload-area strong {
+  font-size: 14px;
+  color: #252c3b;
+}
+
+.upload-area span {
+  font-size: 12px;
+  color: #7d8595;
+  margin-top: 5px;
+}
+
+.upload-area small {
+  font-size: 10px;
+  color: #a0a6b1;
+  margin-top: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+
+/* Predict Button */
+
+.card form button {
   width: 100%;
-  padding: 12px;
+
+  margin-top: 18px;
+
+  padding: 14px;
+
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+
   background: #c31432;
   color: white;
-  font-size: 16px;
+
+  font-size: 15px;
+  font-weight: 700;
+
   cursor: pointer;
-  transition: 0.3s ease;
+
+  transition: 0.3s;
+
+  box-shadow: 0 8px 20px rgba(195, 20, 50, 0.2);
 }
 
-button:hover {
-  background: #a50f28;
+.card form button span {
+  margin-left: 8px;
 }
+
+.card form button:hover {
+  background: #a50f28;
+  transform: translateY(-2px);
+}
+
+
+/* Result */
 
 #result {
   margin-top: 20px;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  background: #f7f8fa;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #424b5c;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.how-section,
+.history-section {
+  padding: 100px 25px;
+  background: white;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-label {
+  color: #c31432;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  margin-top: 10px;
+  color: #172033;
+}
+
+.section-heading p {
+  margin-top: 15px;
+  color: #7a8291;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps {
+  max-width: 1100px;
+  margin: 65px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-card {
+  width: 280px;
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  font-size: 11px;
+  color: #c31432;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff1f3;
+  color: #c31432;
+
+  border-radius: 16px;
+
+  font-size: 25px;
   font-weight: bold;
-  color: #333;
+
+  margin-bottom: 20px;
+}
+
+.step-card h3 {
+  font-size: 17px;
+  color: #202738;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: #7a8291;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.step-line {
+  width: 80px;
+  height: 1px;
+  background: #e2e5ea;
+}
+
+
+/* =========================
+   FINGERPRINT SECTION
+========================= */
+
+.fingerprint-section {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 110px 40px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 100px;
+}
+
+.fingerprint-image {
+  display: flex;
+  justify-content: center;
+}
+
+.fingerprint-circle {
+  width: 330px;
+  height: 330px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle, #fff1f3 0%, #ffe3e7 55%, #fff 56%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 30px 70px rgba(195, 20, 50, 0.12);
+}
+
+.fingerprint-pattern {
+  width: 230px;
+  height: 230px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c31432;
+
+  font-size: 35px;
+  font-weight: bold;
+
+  overflow: hidden;
+
+  transform: rotate(-20deg);
+
+  letter-spacing: -5px;
+}
+
+.fingerprint-content h2 {
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 12px 0 25px;
+  color: #172033;
+}
+
+.fingerprint-content h2 span {
+  color: #c31432;
+}
+
+.fingerprint-content > p {
+  color: #717a8b;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.info-box {
+  padding: 17px;
+
+  border: 1px solid #e9ebef;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-box strong {
+  color: #c31432;
+  font-size: 16px;
+}
+
+.info-box span {
+  color: #7c8493;
+  font-size: 11px;
+}
+
+
+/* =========================
+   HISTORY
+========================= */
+
+.history-section {
+  background: #f8fafc;
+}
+
+.history-card {
+  max-width: 650px;
+  margin: 50px auto 0;
+
+  padding: 50px 35px;
+
+  background: white;
+
+  border: 1px solid #e8ebef;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 40px rgba(30, 40, 60, 0.06);
+}
+
+.history-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff1f3;
+  color: #c31432;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+}
+
+.history-card h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #252c3b;
+}
+
+.history-card p {
+  max-width: 450px;
+  margin: 10px auto 25px;
+
+  color: #7b8392;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.history-btn {
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #172033;
+  color: white;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.history-btn:hover {
+  background: #c31432;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #121827;
+  color: white;
+  padding: 45px 25px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.footer-content .logo span {
+  color: white;
+}
+
+.footer-content p {
+  color: #8e96a6;
+  font-size: 12px;
+}
+
+.copyright {
+  color: #6e7686;
+  font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 900px) {
+
+  .nav-container nav {
+    display: none;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hero-text {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero-text > p {
+    margin: auto;
+  }
+
+  .hero-features {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .fingerprint-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .info-grid {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .step-line {
+    width: 1px;
+    height: 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+@media(max-width: 550px) {
+
+  .hero {
+    padding: 55px 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+
+  .fingerprint-section {
+    padding: 75px 25px;
+  }
+
+  .fingerprint-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .fingerprint-content h2 {
+    font-size: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .login-btn {
+    padding: 8px 14px;
+  }
 }
